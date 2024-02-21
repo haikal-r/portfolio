@@ -7,7 +7,6 @@ module.exports = {
     "./app/**/*.{js,jsx}",
     "./src/**/*.{js,jsx}",
   ],
-  prefix: "",
   theme: {
     container: {
       center: true,
@@ -17,6 +16,11 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: "var(--font-geist-sans)",
+        mono: "var(--font-geist-mono)",
+        laBelleAurore: "var(--font-la-belle-aurore)",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -59,12 +63,12 @@ module.exports = {
       },
       keyframes: {
         "accordion-down": {
-          from: { height: "0" },
+          from: { height: 0 },
           to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+          to: { height: 0 },
         },
       },
       animation: {
@@ -72,6 +76,10 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
+    borderColor: (theme) => ({
+      ...theme("colors"),
+      DEFAULT: theme("colors.border", "currentColor"),
+    }),
   },
   plugins: [require("tailwindcss-animate")],
 };

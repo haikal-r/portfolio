@@ -46,7 +46,7 @@ export const NAVIGATION = [
   },
   {
     title: "Contact",
-    path: "/",
+    path: "/contact",
     content: "_Contact",
     icon: PhoneIcon,
     children: [
