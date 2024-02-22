@@ -1,5 +1,4 @@
 import { MDXComponent } from "@/components/molecules/mdx-component";
-import { allAbouts } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 
 async function getContent(params) {
