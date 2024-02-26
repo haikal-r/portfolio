@@ -88,6 +88,10 @@
     width: 3rem;
   }
 
+  article > hr {
+    border: 0;
+  }
+
   html {
     scroll-behavior: smooth;
   }
