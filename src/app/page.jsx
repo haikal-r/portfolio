@@ -5,7 +5,7 @@ import { siteConfig } from "@/constant";
 
 export default function Home() {
   return (
-    <section className="flex justify-center items-center md:h-full h-3/4 gap-20">
+    <section className="flex justify-center items-center md:h-full gap-20">
       <FadeIn>
         <div className="ml-5 space-y-4">
           <header className="relative">
