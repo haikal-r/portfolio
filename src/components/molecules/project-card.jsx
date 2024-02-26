@@ -1,7 +1,7 @@
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, DialogFooter } from '@/components/atoms/dialog';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, DialogFooter } from '@/components/atoms/dialog'
 import Image from "next/image";
-import Link from 'next/link';
-import { buttonVariants } from '@/components/atoms/button'
+import Link from "next/link";
+import { buttonVariants } from "@/components/atoms/button";
 
 export default function ProjectCard() {
   return (
@@ -26,10 +26,30 @@ export default function ProjectCard() {
           </figure>
 
           <div className='p-3'>
-            <p className='line-clamp-5 text-off-white text-left text-sm text-muted-foreground'>Projects</p>
+            <p className='line-clamp-5 text-off-white text-left text-sm text-muted-foreground'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita molestiae aliquam, modi odio dolorem quidem. Quos accusantium voluptatum earum dolores! Pariatur soluta deserunt quasi nisi eaque architecto est laboriosam deleniti!</p>
           </div>
         </article>
       </DialogTrigger>
+      <DialogContent className='shadow-2xl shadow-secondary max-w-2xl'>
+        <DialogHeader>
+          <DialogTitle className='mb-2'>test</DialogTitle>
+          <DialogDescription>
+            <figure className='relative aspect-video overflow-hidden rounded-md mb-5'>
+              <Image src='/dummy.png' alt='dummy' fill className='object-cover object-top group-hover:scale-105 transition-transform duration-500' />
+            </figure>
+            <ul className='flex items-center gap-x-2 border-y py-2'>
+              <li className='text-foreground'>Technologies :</li>
+            </ul>
+              
+            <p className='whitespace-pre-line mt-2'>test</p>
+          </DialogDescription>
+        </DialogHeader>
+        <DialogFooter>
+          <Link href='/dummy' className={buttonVariants({ variant: 'default' })}>
+            Details
+          </Link>
+        </DialogFooter>
+      </DialogContent>
     </Dialog>
   );
 }
