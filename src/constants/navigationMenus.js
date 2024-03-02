@@ -1,26 +1,23 @@
-import { siteConfig } from "./siteConfig"; 
-import {
-  Activity,
-  CodeIcon,
-  CoffeeIcon,
-  HomeIcon,
-  PhoneIcon,
-  Settings,
-  UserIcon,
-} from "lucide-react";
+import { siteConfig } from "./siteConfig";
+import { UserIcon } from "lucide-react";
+import { RiHomeSmileLine } from "react-icons/ri";
+import { TbAlignBoxBottomCenter } from "react-icons/tb";
+import { LuActivitySquare } from "react-icons/lu";
+import { LiaTelegram } from "react-icons/lia";
+import { FiUser } from "react-icons/fi";
 
 export const NAVIGATION = [
   {
     title: "Home",
     path: "/",
     content: "_Home",
-    icon: HomeIcon,
+    icon: RiHomeSmileLine,
   },
   {
     title: "About",
-    path: "/about",
+    path: "/about/personal.js",
     content: "_About",
-    icon: UserIcon,
+    icon: FiUser,
     children: [
       {
         name: "_Personal",
@@ -30,25 +27,25 @@ export const NAVIGATION = [
         name: "_Tech-stack",
         path: "/about/tech-stack.js",
       },
-    ]
+    ],
   },
   {
     title: "Projects",
     path: "/projects",
     content: "_Projects",
-    icon: CodeIcon,
+    icon: TbAlignBoxBottomCenter,
   },
   {
     title: "Activity",
     path: "/activity",
     content: "_Activity",
-    icon: Activity,
+    icon: LuActivitySquare,
   },
   {
     title: "Contact",
     path: "/contact",
     content: "_Contact",
-    icon: PhoneIcon,
+    icon: LiaTelegram,
     children: [
       {
         name: "Email",
@@ -66,6 +63,6 @@ export const NAVIGATION = [
         name: "Instagram",
         path: siteConfig.links.instagram,
       },
-    ]
+    ],
   },
-]
+];

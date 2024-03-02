@@ -2,10 +2,11 @@ import "./globals.css";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 
-import { siteConfig } from "@/constant/siteConfig";
+import { siteConfig } from "@/constants/siteConfig";
 import AppSideBar from "@/components/app/sidebar";
 import { ThemeToggle } from "@/components/molecules/theme-toggle";
 import { ThemeWrapper } from "@/components/atoms/theme-wrapper";
+import AppFooter from "@/components/app/footer";
 
 export const metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -51,6 +52,7 @@ export default function RootLayout({ children }) {
                 </div>
               </div>
             </div>
+            <AppFooter />
           </main>
         </ThemeWrapper>
       </body>
