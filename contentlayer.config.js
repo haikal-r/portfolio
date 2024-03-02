@@ -24,6 +24,24 @@ const About = defineDocumentType(() => ({
   computedFields,
 }));
 
+/** @type {import('contentlayer/source-files').defineDocumentType} */
+const Projects = defineDocumentType(() => ({
+  name: 'Projects',
+  filePathPattern: `projects/**/*.mdx`,
+  contentType: 'mdx',
+  fields: {
+    title: { type: 'string', required: true },
+    summary: { type: 'string', required: true },
+    image: { type: 'string', required: true },
+    tag: {
+      type: 'list',
+      of: { type: 'string' },
+      required: true
+    }
+  },
+  computedFields
+}))
+
 /** @type {import('rehype-pretty-code').Options} */
 const rehypePrettyOptions = {
   theme: "github-dark-dimmed",
@@ -33,7 +51,7 @@ const rehypePrettyOptions = {
 /** @type {import('contentlayer/source-files').SourcePlugin} */
 export default makeSource({
   contentDirPath: "./src/content",
-  documentTypes: [About],
+  documentTypes: [About, Projects],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [

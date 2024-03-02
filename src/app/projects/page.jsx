@@ -4,6 +4,7 @@ import {
   FadeInStagger,
 } from "@/components/atoms/fade-in";
 import ProjectCard from "@/components/molecules/project-card";
+import { allProjects } from "contentlayer/generated";
 
 export default function ProjectsPage() {
   return (
@@ -15,15 +16,18 @@ export default function ProjectsPage() {
         faster
       >
         <AnimatePresence mode="wait">
-          <FadeIn
-            layout
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            <ProjectCard />
-          </FadeIn>
+          {allProjects.map(project => (
+            <FadeIn
+              layout
+              key={project.title}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <ProjectCard data={project} />
+            </FadeIn>
+          ))}
         </AnimatePresence>
       </FadeInStagger>
 
