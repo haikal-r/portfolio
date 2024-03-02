@@ -1,5 +1,5 @@
 import { AnimatePresence } from "framer-motion";
-import { NAVIGATION } from "@/constant";
+import { NAVIGATION } from "@/constants";
 import { Fragment } from "react";
 import {
   Accordion,

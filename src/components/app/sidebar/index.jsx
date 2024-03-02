@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { Button } from "@/components/atoms/button";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -16,14 +15,7 @@ export default function AppSideBar() {
 
   return (
     <>
-      <nav className="flex items-center justify-end border-b border-r bg-background px-3 py-3 md:h-full md:w-full md:max-w-[65px] md:flex-col md:overflow-y-auto md:border-b-0 md:px-0 md:py-10">
-        {/* <div className="md:min-h-[100px] z-0">
-          <Link href="/">
-            <h1 className="font-semibold select-none text-xl text-wrap">
-              haikal.
-            </h1>
-          </Link>
-        </div> */}
+      <nav className="flex items-center justify-center border-b border-r bg-background px-3 py-3 md:h-full md:w-full md:max-w-[60px] md:flex-col md:overflow-y-auto md:border-b-0 md:px-0 md:py-10">
         <div className="flex items-start md:hidden">
           <ThemeToggle />
           <Button size={"icon"} variant={"ghost"} onClick={toggleNavbar}>

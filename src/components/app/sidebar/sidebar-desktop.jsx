@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
-import { NAVIGATION } from "@/constant";
+import { NAVIGATION } from "@/constants";
 import {
   Tooltip,
   TooltipContent,
@@ -44,13 +44,13 @@ export default function AppSidebarDesktop() {
     <div className="relative hidden w-full flex-col md:flex">
       <div
         ref={activeBackRef}
-        className="absolute top-0 z-10 h-14 w-full translate-y-0 border-y transition-transform duration-300 ease-in-out"
+        className="absolute top-0 z-10 h-14 w-full translate-y-0 border-l-2 border-black/20 dark:border-white/65 transition-transform duration-300 ease-in-out"
       />
 
       {NAVIGATION.map((item, index) => (
         <div
           key={index}
-          className="z-20 grid h-14 place-items-center"
+          className="z-20 grid h-14 place-items-center dark:text-muted-foreground"
           ref={navItemRef}
         >
           <TooltipProvider delayDuration={100}>

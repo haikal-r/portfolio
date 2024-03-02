@@ -1,11 +1,11 @@
 import { FadeIn } from "@/components/atoms/fade-in";
 import { GridPattern } from "@/components/atoms/grid-pattern";
 import { AnimatedName } from "@/components/molecules/animated-name";
-import { siteConfig } from "@/constant";
+import { siteConfig } from "@/constants";
 
 export default function Home() {
   return (
-    <section className="flex justify-center items-center md:h-full gap-20">
+    <section className="flex justify-center items-center md:h-full h-3/4 gap-20">
       <FadeIn>
         <div className="ml-5 space-y-4">
           <header className="relative">
@@ -28,7 +28,7 @@ export default function Home() {
               <span>githubLink</span> ={" "}
               <a
                 target="_blank"
-                href=""
+                href={siteConfig.links.github}
                 className="hover:underline hover:text-foreground transition-colors"
               >
                 &apos;{siteConfig.links.github}&apos;
