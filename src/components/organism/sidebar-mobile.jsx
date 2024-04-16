@@ -39,6 +39,8 @@ export default function AppSidebarMobile({ isOpen, toggleNavbar }) {
                 <Link
                   href={item.path}
                   className="last:pb-0 block py-4 text-lg text-foreground first:pt-0"
+                  key={index}
+                  onClick={toggleNavbar}
                 >
                   {item.content}
                 </Link>
