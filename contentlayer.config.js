@@ -33,6 +33,8 @@ const Projects = defineDocumentType(() => ({
     title: { type: 'string', required: true },
     summary: { type: 'string', required: true },
     image: { type: 'string', required: true },
+    source: {type: 'string', required: true},
+    demo: {type: 'string', required: true},
     tag: {
       type: 'list',
       of: { type: 'string' },
