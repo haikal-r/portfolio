@@ -3,10 +3,10 @@ import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 
 import { siteConfig } from "@/constants/siteConfig";
-import AppSideBar from "@/components/app/sidebar";
+import AppSideBar from "@/components/organism/sidebar";
 import { ThemeToggle } from "@/components/molecules/theme-toggle";
 import { ThemeWrapper } from "@/components/atoms/theme-wrapper";
-import AppFooter from "@/components/app/footer";
+import AppFooter from "@/components/organism/footer";
 
 export const metadata = {
   metadataBase: new URL(siteConfig.url),
