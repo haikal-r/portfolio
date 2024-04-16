@@ -14,7 +14,7 @@ export default async function WeeklyActivity() {
     <FadeIn>
       <article>
         <div className="mb-2.5 border-b pb-2.5 md:space-y-2">
-          <h1 className="text-xl font-semibold">Coding Langueges</h1>
+          <h1 className="text-xl font-semibold">Weekly Activity</h1>
         </div>
         {data.reverse().map((item) => (
           <pre
