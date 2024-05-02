@@ -1,5 +1,4 @@
 import { SiGithub, SiGmail, SiInstagram, SiLinkedin } from "react-icons/si";
-
 import {
   Accordion,
   AccordionContent,

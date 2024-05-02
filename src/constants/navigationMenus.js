@@ -6,6 +6,7 @@ import { LuActivitySquare } from "react-icons/lu";
 import { LiaTelegram } from "react-icons/lia";
 import { FiUser } from "react-icons/fi";
 
+
 export const NAVIGATION = [
   {
     title: "Home",
@@ -40,6 +41,28 @@ export const NAVIGATION = [
     path: "/activity",
     content: "_Activity",
     icon: LuActivitySquare,
+    children: [
+      {
+        name: "Languages",
+        slug: "languages",
+        path: "/activity/languages",
+      },
+      {
+        name: "Weekly Activity",
+        slug: "weekly-activity",
+        path: "/activity/weekly-activity",
+      },
+      {
+        name: "Code Editor",
+        slug: "code-editor",
+        path: "/activity/code-editor",
+      },
+      {
+        name: "Operating Systems",
+        slug: "operating-systems",
+        path: "/activity/operating-systems",
+      },
+    ],
   },
   {
     title: "Contact",

@@ -1,7 +1,4 @@
-import { HiTerminal } from "react-icons/hi";
-import { BsActivity } from "react-icons/bs";
-import { BiText } from "react-icons/bi";
-import { SiArchlinux } from "react-icons/si";
+
 import { Suspense } from "react";
 import {
   Accordion,
@@ -11,6 +8,10 @@ import {
 } from "@/components/atoms/accordion";
 import { FadeInStagger, FadeIn } from "@/components/atoms/fade-in";
 import { AsideLink } from "@/components/atoms/aside-link";
+import { HiTerminal } from "react-icons/hi";
+import { BsActivity } from "react-icons/bs";
+import { BiText } from "react-icons/bi";
+import { SiArchlinux } from "react-icons/si";
 
 export default function ActivityLayout({ children }){
   return (
