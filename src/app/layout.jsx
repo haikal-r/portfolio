@@ -15,6 +15,8 @@ export const metadata = {
   openGraph: {
     title: siteConfig.name,
     description: siteConfig.description,
+    images: siteConfig.images,
+    authors: siteConfig.authors,
     url: siteConfig.url,
     type: "website",
   },
