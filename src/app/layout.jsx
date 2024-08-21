@@ -7,6 +7,7 @@ import AppSideBar from "@/components/organism/sidebar";
 import { ThemeToggle } from "@/components/molecules/theme-toggle";
 import { ThemeWrapper } from "@/components/atoms/theme-wrapper";
 import AppFooter from "@/components/organism/footer";
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -47,7 +48,7 @@ export default function RootLayout({ children }) {
             <AppSideBar />
             <div className="relative h-full w-full">
               {children}
-
+              <Analytics />
               <div className="absolute right-0 top-0 z-50 hidden md:block">
                 <div className="border-b border-l bg-background">
                   <ThemeToggle />
