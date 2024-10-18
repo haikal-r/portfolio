@@ -1,13 +1,13 @@
 import "./globals.css";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
-
 import { siteConfig } from "@/constants/siteConfig";
 import AppSideBar from "@/components/organism/sidebar";
 import { ThemeToggle } from "@/components/molecules/theme-toggle";
 import { ThemeWrapper } from "@/components/atoms/theme-wrapper";
 import AppFooter from "@/components/organism/footer";
 import { Analytics } from '@vercel/analytics/react';
+import NextTopLoader from 'nextjs-toploader';
 
 export const metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -43,6 +43,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${GeistMono.variable} ${GeistSans.variable} font-mono`}>
+        <NextTopLoader 
+          showSpinner={false}
+        />
         <ThemeWrapper attribute="class" defaultTheme="dark" enableSystem>
           <main className="md:flex">
             <AppSideBar />
